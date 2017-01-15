@@ -1,0 +1,1141 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Real Home A Real Estate Category Flat Bootstarp Resposive Website Template | Buy :: w3layouts</title>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--menu-->
+<script src="js/scripts.js"></script>
+<link href="css/styles.css" rel="stylesheet">
+<!--//menu-->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Real Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+</head>
+<style>
+.col-md-2, .col-md-10{
+    padding:0;
+}
+.panel{
+    margin-bottom: 0px;
+}
+.chat-window{
+    bottom:0;
+    position:fixed;
+    float:right;
+    margin-left:10px;
+}
+.chat-window > div > .panel{
+    border-radius: 5px 5px 0 0;
+}
+.icon_minim{
+    padding:2px 10px;
+}
+.msg_container_base{
+  background: #e5e5e5;
+  margin: 0;
+  padding: 0 10px 10px;
+  max-height:300px;
+  overflow-x:hidden;  
+}
+.top-bar {
+  background: #666;
+  color: white;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.msg_receive{
+    padding-left:0;
+    margin-left:0;
+}
+.msg_sent{
+    padding-bottom:20px !important;
+    margin-right:0;
+}
+.messages {
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width:100%;
+}
+.messages > p {
+    font-size: 13px;
+    margin: 0 0 0.2rem 0;
+  }
+.messages > time {
+    font-size: 11px;
+    color: #ccc;
+}
+.msg_container {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.avatar {
+    position: relative;
+}
+.base_receive > .avatar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid #FFF;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.base_sent {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.base_sent > .avatar:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 1px 1px 2px rgba(black, 0.2); // not quite perfect but close
+}
+
+.msg_sent > time{
+    float: right;
+}
+
+
+
+.msg_container_base::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.msg_container_base::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.msg_container_base::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.btn-group.dropup{
+    position:fixed;
+    left:0px;
+    bottom:0;
+}
+</style>
+
+<script>
+$(document).on('click', '.panel-heading span.icon_minim', function (e) {
+    var $this = $(this);
+    if (!$this.hasClass('panel-collapsed')) {
+        $this.parents('.panel').find('.panel-body').slideUp();
+        $this.addClass('panel-collapsed');
+        $this.removeClass('glyphicon-minus').addClass('glyphicon-plus');
+    } else {
+        $this.parents('.panel').find('.panel-body').slideDown();
+        $this.removeClass('panel-collapsed');
+        $this.removeClass('glyphicon-plus').addClass('glyphicon-minus');
+    }
+});
+$(document).on('focus', '.panel-footer input.chat_input', function (e) {
+    var $this = $(this);
+    if ($('#minim_chat_window').hasClass('panel-collapsed')) {
+        $this.parents('.panel').find('.panel-body').slideDown();
+        $('#minim_chat_window').removeClass('panel-collapsed');
+        $('#minim_chat_window').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+    }
+});
+$(document).on('click', '#new_chat', function (e) {
+    var size = $( ".chat-window:last-child" ).css("margin-left");
+     size_total = parseInt(size) + 400;
+    alert(size_total);
+    var clone = $( "#chat_window_1" ).clone().appendTo( ".container" );
+    clone.css("margin-left", size_total);
+});
+$(document).on('click', '.icon_close', function (e) {
+    //$(this).parent().parent().parent().parent().remove();
+    $( "#chat_window_1" ).remove();
+});
+
+</script>
+<script>
+	function sendBtnClicked(){			
+		document.getElementById("sendMsgBtn").click();
+	}
+	function searchBtnClicked(){
+		document.getElementById("searchBtn").click();
+	}
+	function propertyfilterOn(){
+		if(document.getElementById("bhk").style.display == "block"){
+			document.getElementById("bhk").style.display = "none";
+		}
+		else{
+			document.getElementById("bhk").style.display = "block";
+		}
+	}
+	function indepFilterOn(){
+		if(document.getElementById("total_floors").style.display == "block"){
+			document.getElementById("total_floors").style.display = "none";
+		}
+		else{
+			document.getElementById("total_floors").style.display = "block";
+		}
+	}
+	function jayaNagarSearch(){		
+		document.getElementById("slowJayaBtn").click();	
+	}
+	
+	function finalJaya(){
+		document.getElementById("quickJayaBtn").click();
+	}
+	function appendDivs(){
+		$("#messaging").clone(true, true).contents().appendTo('#finalChat');
+	}
+	
+	function appendDivs1(){
+		$("#messaging1").clone(true, true).contents().appendTo('#finalChat');
+		var objDiv = document.getElementById("finalChat");
+		objDiv.scrollTop = objDiv.scrollHeight;		
+	}
+	
+</script>
+<body>
+<select id="setDiv" class="shiny-html-output" style="visibility: hidden;" onchange="appendDivs();";>
+	<option value="-" selected>select one option</option>
+	<option value="1">yes</option>
+	<option value="0">No</option>
+</select>
+
+<select id="setDiv1" class="shiny-html-output" style="visibility: hidden;" onchange="appendDivs1();";>
+	<option value="-" selected>select one option</option>
+	<option value="1">yes</option>
+	<option value="0">No</option>
+</select>
+	
+<!--header-->
+	<div class="navigation">
+			<div class="container-fluid">
+				<nav class="pull">
+					<ul>
+						<li><a  href="index.html">Home</a></li>
+						<li><a  href="about.html">About Us</a></li>
+						<li><a  href="blog.html">Blog</a></li>
+						<li><a  href="terms.html">Terms</a></li>
+						<li><a  href="privacy.html">Privacy</a></li>
+						<li><a  href="contact.html">Contact</a></li>
+					</ul>
+				</nav>			
+			</div>
+		</div>
+
+<div class="header">
+	<div class="container">
+		<!--logo-->
+			<div class="logo">
+				<h1><a href="index.html">SR - DreamHome</a></h1>
+			</div>
+		<!--//logo-->
+		<div class="top-nav">
+			<ul class="right-icons">
+				<li><span ><i class="glyphicon glyphicon-phone"> </i>+1384 757 546</span></li>
+				<li><a><i class="glyphicon glyphicon-user"> </i><p id="user_name" class="shiny-html-output"></p></a></li>
+				<li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a></li>
+			</ul>
+			<div class="nav-icon">
+				<div class="hero fa-navicon fa-2x nav_slide_button" id="hero">
+						<a href="#"><i class="glyphicon glyphicon-menu-hamburger"></i> </a>
+					</div>	
+				<!---
+				<a href="#" class="right_bt" id="activator"><i class="glyphicon glyphicon-menu-hamburger"></i>  </a>
+			--->
+			</div>
+		<div class="clearfix"> </div>
+			<!---pop-up-box---->
+				    
+				<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+				<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+			<!---//pop-up-box---->
+				<div id="small-dialog" class="mfp-hide">
+					    <!----- tabs-box ---->
+				<div class="sap_tabs">	
+				     <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+						  <ul class="resp-tabs-list">
+						  	  <li class="resp-tab-item " aria-controls="tab_item-0" role="tab"><span>All Homes</span></li>
+							  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>For Sale</span></li>
+							  <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>For Rent</span></li>
+							  <div class="clearfix"></div>
+						  </ul>				  	 
+						  <div class="resp-tabs-container">
+						  		<h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>All Homes</h2><div class="tab-1 resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
+								 	<div class="facts">
+									  	<div class="login">
+											<input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">		
+									 		<input type="submit" value="">
+									 	</div>        
+							        </div>
+						  		</div>
+							     <h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>For Sale</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+									<div class="facts">									
+										<div class="login">
+											<input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">		
+									 		<input type="submit" value="">
+									 	</div> 
+							        </div>	
+								 </div>									
+							      <h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>For Rent</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+									 <div class="facts">
+										<div class="login">
+											<input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">		
+									 		<input type="submit" value="">
+									 	</div> 
+							         </div>	
+							    </div>
+					      </div>
+					 </div>
+					 <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+				    	<script type="text/javascript">
+						    $(document).ready(function () {
+						        $('#horizontalTab').easyResponsiveTabs({
+						            type: 'default', //Types: default, vertical, accordion           
+						            width: 'auto', //auto or any width like 600px
+						            fit: true   // 100% fit in a container
+						        });
+						    });
+			  			 </script>	
+				</div>
+				</div>
+				 <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+				</script>
+					
+	
+		</div>
+		<div class="clearfix"> </div>
+		</div>	
+</div>
+<!--//-->	
+<div class=" banner-buying">
+	<div class=" container">
+	<h3><span>Buy Home</span></h3> 
+	<!---->
+	<div class="menu-right">
+		
+		 <ul class="menu">
+			<li class="item1"><a href="#"> Menu<i class="glyphicon glyphicon-menu-down"> </i> </a>
+			<ul class="cute">
+				<li class="subitem1"><a href="buy.html">Buy </a></li>
+				<li class="subitem2"><a href="sell.html">Sell</a></li>
+				<li class="subitem2"><a href="seller_dashboard.html">Seller Dashboard</a></li>
+				<li class="subitem3"><a href="index.html">Logout</a></li>
+			</ul>
+		</li>	
+		</ul>
+		
+	</div>
+	<div class="clearfix"> </div>
+		<!--initiate accordion-->
+		<script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+			
+			});
+		</script>
+      		
+	</div>
+</div>
+<!--//header-->
+<div class="container">
+	<!-- Chat BOT -->
+	
+	<!--price-->
+	<div class="price">
+		<div class="price-grid">		
+			<div class="col-sm-4 price-top">
+				<h4>City</h4>
+				<div id="city" class="form-group shiny-input-checkboxgroup shiny-input-container">
+					<div class="checkbox">
+					  <label>
+						<input type="checkbox" name="city" value="bangalore"/>
+						<span>Bangalore</span>
+					  </label>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Property Type</h4>
+				<div id="housetype" class="form-group shiny-input-checkboxgroup shiny-input-container">
+					<div class="checkbox">
+					  <label>
+						<input onclick="propertyfilterOn();"type="checkbox" name="housetype" value="apartment"/>
+						<span>Apartment</span>
+					  </label>
+					</div>
+					<div class="checkbox">
+					  <label>
+						<input onclick="indepFilterOn();" type="checkbox" name="housetype" value="independent_house"/>
+						<span>Independent House</span>
+					  </label>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Zone</h4>
+				<div id="zone" class="form-group shiny-input-checkboxgroup shiny-input-container">
+					<div class="checkbox">
+					  <label>
+						<input type="checkbox" name="zone" value="east"/>
+						<span>East</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="zone" value="west"/>
+						<span>West</span>
+					  </label>
+					</div>
+					
+					<div class="checkbox">
+					  <label>
+						<input type="checkbox" name="zone" value="north"/>
+						<span>North</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="zone" value="south"/>
+						<span>South</span>
+					  </label>
+					</div>					
+				</div>
+			</div>															
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-6 price-top">
+				<h4>Area</h4>
+				<div id="location" class="form-group shiny-input-checkboxgroup">
+				<div class="checkbox">
+					  <label>
+						<input type="checkbox" name="location" value="jayanagar"/>
+						<span>Jayanagar</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="indiranagar"/>
+						<span>Indira Nagar</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="kormangala"/>
+						<span>Kormangala</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="whitefield"/>
+						<span>White field</span>
+					  </label>
+					  
+					  <label>
+						<input type="checkbox" name="location" value="marathalli"/>
+						<span>Marathalli</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="btmlayout"/>
+						<span>BTM Layout</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="jpnagar"/>
+						<span>JP Nagar</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="hsrlayout"/>
+						<span>HSR Layout</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="bellandur"/>
+						<span>Bellandur</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="brookefield"/>
+						<span>brookefield</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="sarjapur_road"/>
+						<span>Sarjapur Road</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="kr_puram"/>
+						<span>KR Puram</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="hebbal"/>
+						<span>Hebbal</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="ramamurthy_nagar"/>
+						<span>Ramamurthy Nagar</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="mahadevapura"/>
+						<span>Mahadevapura Road</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="kanakapura_road"/>
+						<span>Kanakapura Road</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="horamavu"/>
+						<span>Horamavu</span>
+					  </label>
+					  <label>
+						<input type="checkbox" name="location" value="electronic_city"/>
+						<span>Electronics City</span>
+					  </label>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Availability</h4>
+				<div id="available" class="form-group shiny-input-checkboxgroup shiny-input-container">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="available" value="ready_to_move"/>
+							<span>ready_to_move</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="available" value="under_construction"/>
+							<span>under_construction</span>
+						  </label>					  
+					</div>	
+				</div>
+			</div>
+			<div class="col-sm-4 price-top" id="bhk" style="display: none;">
+				<h4>BHK</h4>
+				<div id="bhk" class="form-group shiny-input-checkboxgroup shiny-input-container">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="bhk" value="1"/>
+							<span>1 BHK</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="bhk" value="2"/>
+							<span>2 BHK</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="bhk" value="3"/>
+							<span>3 BHK</span>
+						  </label>
+					</div>	
+				</div>				
+			</div>
+			
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-4 price-top" id="total_floors" style="display: none;">
+				<h4>Total Floors</h4>
+				<div id="nooffloors" class="form-group shiny-input-checkboxgroup shiny-input-container">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="nooffloors" value="1"/>
+							<span>1</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="nooffloors" value="2"/>
+							<span>2</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="nooffloors" value="3"/>
+							<span>3</span>
+						  </label>
+					</div>	
+				</div>				
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Parking</h4>
+				<div id="parking" class="form-group shiny-input-checkboxgroup">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="parking" value="covered"/>
+							<span>Covered</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="parking" value="open"/>
+							<span>Open</span>
+						  </label>						  
+					</div>	
+				</div>				
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Transaction Type</h4>
+				<div id="transaction" class="form-group shiny-input-checkboxgroup">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="transaction" value="resale"/>
+							<span>Re-Sale</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="transaction" value="new"/>
+							<span>New</span>
+						  </label>						  
+					</div>	
+				</div>				
+			</div>
+			
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-4 price-top">
+				<h4>Property on loan</h4>
+				<div id="onloan" class="form-group shiny-input-checkboxgroup">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="onloan" value="yes"/>
+							<span>Yes</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="onloan" value="no"/>
+							<span>No</span>
+						  </label>						  
+					</div>	
+				</div>				
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Water Source</h4>
+				<div id="water" class="form-group shiny-input-checkboxgroup">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="water" value="bore_well"/>
+							<span>bore_well</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="water" value="both"/>
+							<span>Both</span>
+						  </label>						  
+					</div>	
+				</div>				
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Site Facing</h4>
+				<div id="site_facing" class="form-group shiny-input-checkboxgroup">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="site_facing" value="east"/>
+							<span>East</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="site_facing" value="west"/>
+							<span>West</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="site_facing" value="north"/>
+							<span>North</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="site_facing" value="south"/>
+							<span>South</span>
+						  </label>						  
+					</div>	
+				</div>				
+			</div>
+			
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-4 price-top">
+				<h4>Door Facing</h4>
+				<div id="door_facing" class="form-group shiny-input-checkboxgroup">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="door_facing" value="east"/>
+							<span>East</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="door_facing" value="west"/>
+							<span>West</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="door_facing" value="north"/>
+							<span>North</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="door_facing" value="south"/>
+							<span>South</span>
+						  </label>						  
+					</div>	
+				</div>				
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Flooring Type</h4>
+				<div id="flooring_type" class="form-group shiny-input-checkboxgroup">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="flooring_type" value="vitrified_tiles"/>
+							<span>Vitrified Tiles</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="flooring_type" value="marble"/>
+							<span>Marble</span>
+						  </label>						  						  
+					</div>	
+				</div>				
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Furnishing type</h4>
+				<div id="furnishing" class="form-group shiny-input-checkboxgroup">
+					<div class="checkbox">
+						  <label>
+							<input type="checkbox" name="furnishing" value="semi"/>
+							<span>Semi</span>
+						  </label>
+						  <label>
+							<input type="checkbox" name="furnishing" value="fully"/>
+							<span>Fully</span>
+						  </label>						  						  
+					</div>	
+				</div>				
+			</div>
+			
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-4 price-top">
+				<h4>Property Age</h4>
+				<input placeholder="Property Age" name="age"/>
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Expected rental Income</h4>
+				<input placeholder="Rental Income" name="rentexp"/>				
+			</div>			
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-6 price-top1">
+				<h4>Price Range</h4>
+				<ul>
+					<li>
+						<select class="in-drop" name="minprice">
+							<option>Price From</option>
+							<option value="0">0</option>
+							<option value="500000">5 Lacs </option>
+							<option value="1000000">10 Lacs</option>
+							<option value="1500000">15 Lacs</option>
+							<option value="2000000">20 Lacs</option>
+							<option value="2500000">25 Lacs</option>
+							<option value="3000000">30 Lacs</option>
+							<option value="3500000">35 Lacs</option>
+							<option value="4000000">40 Lacs</option>
+							<option value="4500000">45 Lacs</option>
+							<option value="5000000">50 Lacs</option>
+							<option value="5500000">55 Lacs</option>
+							<option value="6000000">60 Lacs</option>
+							<option value="6500000">65 Lacs</option>
+							<option value="7000000">70 Lacs</option>
+							<option value="7500000">75 Lacs</option>
+							<option value="8000000">80 Lacs</option>
+							<option value="8500000">85 Lacs</option>
+							<option value="9000000">90 Lacs</option>
+							<option value="9500000">95 Lacs</option>
+						</select>
+					</li>
+					<span>-</span>
+					<li>
+						<select class="in-drop" name="maxprice">
+							<option>Price To</option>
+							<option value="500000">5 Lacs </option>
+							<option value="1000000">10 Lacs</option>
+							<option value="1500000">15 Lacs</option>
+							<option value="2000000">20 Lacs</option>
+							<option value="2500000">25 Lacs</option>
+							<option value="3000000">30 Lacs</option>
+							<option value="3500000">35 Lacs</option>
+							<option value="4000000">40 Lacs</option>
+							<option value="4500000">45 Lacs</option>
+							<option value="5000000">50 Lacs</option>
+							<option value="5500000">55 Lacs</option>
+							<option value="6000000">60 Lacs</option>
+							<option value="6500000">65 Lacs</option>
+							<option value="7000000">70 Lacs</option>
+							<option value="7500000">75 Lacs</option>
+							<option value="8000000">80 Lacs</option>
+							<option value="8500000">85 Lacs</option>
+							<option value="9000000">90 Lacs</option>
+							<option value="9500000">95 Lacs</option>
+							<option value="10000000">100 Cr</option>
+						</select>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-6 price-top1">
+				<h4>Area</h4>
+				<ul>
+					<li>
+						<select class="in-drop" name="minplot">
+							<option>Sqmt From</option>
+							<option value="0">0</option>
+							<option value="500">500 Sq Ft</option>
+							<option value="1000">1000 Sq Ft</option>
+							<option value="1500">1500 Sq Ft</option>
+							<option value="2000">2000 Sq Ft</option>
+							<option value="2500">2500 Sq Ft</option>
+							<option value="3000">3000 Sq Ft</option>
+							<option value="3500">3500 Sq Ft</option>
+							<option value="4000">4000 Sq Ft</option>
+							<option value="4500">4500 Sq Ft</option>
+						</select>
+					</li>
+					<span>-</span>
+					<li>
+						<select class="in-drop" name="maxplot">
+							<option>Sqmt To</option>
+							<option value="500">500 Sq Ft</option>
+							<option value="1000">1000 Sq Ft</option>
+							<option value="1500">1500 Sq Ft</option>
+							<option value="2000">2000 Sq Ft</option>
+							<option value="2500">2500 Sq Ft</option>
+							<option value="3000">3000 Sq Ft</option>
+							<option value="3500">3500 Sq Ft</option>
+							<option value="4000">4000 Sq Ft</option>
+							<option value="4500">4500 Sq Ft</option>
+							
+						</select>
+					</li>
+				</ul>
+			</div>
+			<br/>
+			<div class="clearfix"> </div>			
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-6 price-top1">				
+				<input type="submit" value="Submit" onclick="searchBtnClicked();">
+				<input type="submit" id="slowJayaBtn" style="display: none;" value="submit jaya"  onclick="finalJaya();"/>
+			</div>
+			<button id="searchBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">abcd</button>			
+			<div class="clearfix"> </div>			
+		</div>
+		
+	</div>
+	<!---->
+	<div class="top-grid">
+		<h3>Top Area</h3>
+		<div class="grid-at">
+			<div class="col-md-3 grid-city">
+				<div class="grid-lo">
+					<a onclick="jayaNagarSearch();">
+						<figure class="effect-layla">
+						<img  class=" img-responsive" src="images/ce.jpg" alt="img06">
+						<figcaption>
+							<h4>Jaya Nagar</h4>
+							
+						</figcaption>			
+					</figure>
+					</a>
+					<button id="quickJayaBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">jayanagar</button>					
+				 </div>
+			</div>
+			<div class="col-md-3 grid-city">
+				<div class="grid-lo">
+						<a onclick="document.getElementById('slowIndiraBtn').click();">
+					<figure class="effect-layla">
+						<img class=" img-responsive" src="images/ce1.jpg" alt="img06">
+						<figcaption>
+							<h4>Indira Nagar</h4>
+							
+						</figcaption>			
+					</figure>
+					</a>
+					<input type="submit" id="slowIndiraBtn" style="display: none;" value="submit jaya"  onclick="document.getElementById('indiraBtn').click();"/>
+					<button id="indiraBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">indiranagar</button>					
+				 </div>
+			</div>
+			<div class="col-md-6 grid-city grid-city1">
+				<div class="grid-me">
+				<div class="col-md-8 grid-lo1">
+					<div class=" grid-lo">
+							<a onclick="document.getElementById('slowKorBtn').click();">
+					<figure class="effect-layla">
+						<img class=" img-responsive" src="images/ce2.jpg" alt="img06">
+						<figcaption>
+							<h4 class="effect1">Kormangala</h4>
+							
+						</figcaption>			
+					</figure>
+					</a>
+					<input type="submit" id="slowKorBtn" style="display: none;" value="submit jaya"  onclick="document.getElementById('kormangalaBtn').click();"/>
+					<button id="kormangalaBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">kormangala</button>					
+				 </div>
+				</div>
+				 <div class="col-md-4 grid-lo2">
+				 	<div class=" grid-lo">
+				 			<a onclick="document.getElementById('slowWhitBtn').click();">
+					<figure class="effect-layla">
+						<img class=" img-responsive" src="images/ce3.jpg" alt="img06">
+						<figcaption>
+							<h4 class="effect2">Whitefield</h4>
+							
+						</figcaption>			
+					</figure>
+					</a>
+					<input type="submit" id="slowWhitBtn" style="display: none;" value="submit jaya"  onclick="document.getElementById('whitefieldBtn').click();"/>
+					<button id="whitefieldBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">whitefield</button>					
+				 </div>
+				 </div>
+				 <div class="clearfix"> </div>
+			</div>	
+			<div class="grid-me">
+				<div class="col-md-6 grid-lo3">
+					<div class=" grid-lo">
+							<a onclick="document.getElementById('slowMarathBtn').click();">
+					<figure class="effect-layla">
+						<img class="img-responsive" src="images/ce4.jpg" alt="img06">
+						<figcaption>
+							<h4 class="effect3">Marathalli</h4>
+							
+						</figcaption>			
+					</figure>
+					</a>
+					<input type="submit" id="slowMarathBtn" style="display: none;" value="submit jaya"  onclick="document.getElementById('marathalliBtn').click();"/>
+					<button id="marathalliBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">marathalli</button>					
+				 </div>
+				 </div>
+				 <div class="col-md-6 grid-lo4">
+				 	<div class=" grid-lo">
+				 			<a onclick="document.getElementById('slowBtmBtn').click();">
+					<figure class="effect-layla">
+						<img class="img-responsive" src="images/ce5.jpg" alt="img06">
+						<figcaption>
+							<h4 class="effect3">BTM Layout</h4>
+							
+						</figcaption>			
+					</figure>
+					</a>
+					<input type="submit" id="slowBtmBtn" style="display: none;" value="submit jaya"  onclick="document.getElementById('btmBtn').click();"/>
+					<button id="btmBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">btm</button>					
+				 </div>
+				 </div>
+				 <div class="clearfix"> </div>
+			</div>	
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+
+	</div>
+</div>
+<div class="container">
+	<div class="shiny-html-output" style="visibility: hidden;"id="messaging">
+	
+	</div>
+	<div class="shiny-html-output" style="visibility: hidden;"id="messaging1">
+	
+	</div>
+    <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="margin-left:62%; z-index: 1;">
+        <div class="col-xs-12 col-md-12">
+        	<div class="panel panel-default">
+                <div class="panel-heading top-bar">
+                    <div class="col-md-8 col-xs-8">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Chat - Aravind</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style="text-align: right;">
+                        <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                    </div>
+                </div>
+                <div class="panel-body msg_container_base" id="finalChat">                    
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_receive">
+                                <p>Hi Aravind, Please give me a chance to help you :)</p>
+                                <time datetime="2009-11-13T20:00">Bot • just now</time>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+				
+				
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <input type="text" name="message" placeholder="Write your message here..." />
+                        <span class="input-group-btn">
+                        </span>
+						<input type="submit" value="Send"  onclick="sendBtnClicked();"/>
+						<button id="sendMsgBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">send</button>
+                    </div>
+                </div>
+    		</div>
+        </div>
+    </div>
+</div>
+<!---->
+<!--premium-project-->
+<div class="container">
+	<div class="future">
+		<h3 >Search Results</h3>
+			<div class="content-bottom-in">
+				
+		</div>
+	</div>
+</div>
+<div class="container">
+		<h3>Residential Flats, Apartments</h3>
+		<div class="future">
+			<div class="col-md-9 single-box">
+				<div class="shiny-html-output" id="temptest"></div>
+			</div>
+		</div>
+		<div class="col-md-3 map-single-bottom" style="float: right;">
+			<div class="map-single">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8454861410864!2d77.62115781435472!3d12.917650690891323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14f14b349a21%3A0x7cbce05215cb23ff!2sSilk+Board!5e0!3m2!1sen!2sin!4v1471153591922" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="single-box-right">
+		     	<h4>Featured Communities</h4>
+				<div class="shiny-html-output" id="featuredCommunities">				
+					
+				</div>
+		 </div>
+	  </div>
+		<div class="clearfix"> </div>
+		
+		</div>
+	
+<!--//premium-project-->
+<!---->
+<div class="container">
+	<div class="future">
+		<h3 >Recommendations</h3>
+			<div class="content-bottom-in">
+				<div class="shiny-html-output" id="recomendProps">
+				
+					
+		</div>
+		</div>
+	</div>
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-top-at">
+			<div class="col-md-3 amet-sed">
+				<h4>Our Company</h4>
+				<ul class="nav-bottom">
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="blog.html">For Sale By Owner Blog</a></li>
+					<li><a href="mobile_app.html">Mobile</a></li>
+					<li><a href="terms.html">Terms & Conditions</a></li>
+					<li><a href="privacy.html">Privacy Policy</a></li>	
+					<li><a href="blog.html">Blog</a></li>
+					
+				</ul>	
+			</div>
+			<div class="col-md-3 amet-sed ">
+				<h4>Work With Us</h4>
+					<ul class="nav-bottom">
+						<li><a href="single.html">Real Estate Brokers</a></li>
+						<li><a href="single.html">Business Development</a></li>
+						<li><a href="single.html">Affiliate Programs</a></li>
+						<li><a href="contact.html">Sitemap</a></li>
+						<li><a href="career.html">Careers</a></li>
+						<li><a href="feedback.html">Feedback</a></li>	
+					</ul>	
+			</div>
+			<div class="col-md-3 amet-sed">
+				<h4>Customer Support</h4>
+				<p>Mon-Fri, 7AM-7PM </p>
+				<p>Sat-Sun, 8AM-5PM </p>
+				<p>177-869-6559</p>
+					<ul class="nav-bottom">
+						<li><a href="#">Live Chat</a></li>
+						<li><a href="faqs.html">Frequently Asked Questions</a></li>
+						<li><a href="suggestion.html">Make a Suggestion</a></li>
+					</ul>	
+			</div>
+			<div class="col-md-3 amet-sed ">
+				<h4>Property Services</h4>
+				   <ul class="nav-bottom">
+						<li><a href="single.html">Residential Property</a></li>
+						<li><a href="single.html">Commercial Property</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+						<li><a href="typo.html">Short Codes</a></li>	
+					</ul>	
+					<ul class="social">
+						<li><a href="#"><i> </i></a></li>
+						<li><a href="#"><i class="gmail"> </i></a></li>
+						<li><a href="#"><i class="twitter"> </i></a></li>
+						<li><a href="#"><i class="camera"> </i></a></li>
+						<li><a href="#"><i class="dribble"> </i></a></li>
+					</ul>
+			</div>
+		<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="col-md-4 footer-logo">
+				<h2><a href="index.html">REAL HOME</a></h2>
+			</div>
+			<div class="col-md-8 footer-class">
+				<p >© 2015 Real Home. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+			</div>
+		<div class="clearfix"> </div>
+	 	</div>
+	</div>
+</div>
+<!--//footer-->
+</body>
+</html>

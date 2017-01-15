@@ -1,0 +1,564 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Real Home A Real Estate Category Flat Bootstarp Resposive Website Template | Buy_Single :: w3layouts</title>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--menu-->
+<script src="js/scripts.js"></script>
+<link href="css/styles.css" rel="stylesheet">
+<!--//menu-->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Real Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+</head>
+<script>
+	function submitBtnClicked(){
+		document.getElementById("submitHomeBtn").click();
+	}
+	function propertyTypeChange(){
+		var e = document.getElementById("property_type")
+		var strUsr = e.options[e.selectedIndex].value;
+		if(strUsr == "apartment"){			
+			document.getElementById("apartment_attr").style.display = "block";			
+			document.getElementById("independent_house_attr").style.display = "none";
+		}
+		if(strUsr == "independent_house"){
+			document.getElementById("apartment_attr").style.display = "none";			
+			document.getElementById("independent_house_attr").style.display = "block";
+		}
+	}
+	/*function setZoneFilter(){
+		var e = document.getElementById("zone")
+		var strUsr = e.options[e.selectedIndex].value;
+		if(strUsr == "east"){			
+			document.getElementById("east_zone").style.display = "block";			
+			document.getElementById("west_zone").style.display = "none";
+			document.getElementById("north_zone").style.display = "none";
+			document.getElementById("south_zone").style.display = "none";
+		}
+		if(strUsr == "west"){
+			document.getElementById("east_zone").style.display = "none";			
+			document.getElementById("west_zone").style.display = "block";
+			document.getElementById("north_zone").style.display = "none";
+			document.getElementById("south_zone").style.display = "none";
+		}
+		if(strUsr == "north"){
+			document.getElementById("east_zone").style.display = "none";			
+			document.getElementById("west_zone").style.display = "none";
+			document.getElementById("north_zone").style.display = "block";
+			document.getElementById("south_zone").style.display = "none";
+		}
+		if(strUsr == "south"){
+			document.getElementById("east_zone").style.display = "none";			
+			document.getElementById("west_zone").style.display = "none";
+			document.getElementById("north_zone").style.display = "none";
+			document.getElementById("south_zone").style.display = "block";
+		}
+	}*/
+</script>
+<body>
+<!--header-->
+	<div class="navigation">
+			<div class="container-fluid">
+				<nav class="pull">
+					<ul>
+						<li><a  href="index.html">Home</a></li>
+						<li><a  href="about.html">About Us</a></li>
+						<li><a  href="blog.html">Blog</a></li>
+						<li><a  href="terms.html">Terms</a></li>
+						<li><a  href="privacy.html">Privacy</a></li>
+						<li><a  href="contact.html">Contact</a></li>
+					</ul>
+				</nav>			
+			</div>
+		</div>
+
+<div class="header">
+	<div class="container">
+		<!--logo-->
+			<div class="logo">
+				<h1><a href="index.html">SR - DreamHome</a></h1>
+			</div>
+		<!--//logo-->
+		<div class="top-nav">
+			<ul class="right-icons">
+				<li><span ><i class="glyphicon glyphicon-phone"> </i>+1384 757 546</span></li>
+				<li><a  href="login.html"><i class="glyphicon glyphicon-user"> </i><p id="user_name" class="shiny-html-output"></p></a></li>
+				<li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a></li>
+				
+			</ul>
+			<div class="nav-icon">
+				<div class="hero fa-navicon fa-2x nav_slide_button" id="hero">
+						<a href="#"><i class="glyphicon glyphicon-menu-hamburger"></i> </a>
+					</div>	
+				<!---
+				<a href="#" class="right_bt" id="activator"><i class="glyphicon glyphicon-menu-hamburger"></i>  </a>
+			--->
+			</div>
+		<div class="clearfix"> </div>
+			<!---pop-up-box---->
+			    
+				<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+				<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+			<!---//pop-up-box---->
+				<div id="small-dialog" class="mfp-hide">
+					    <!----- tabs-box ---->
+				<div class="sap_tabs">	
+				     <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+						  <ul class="resp-tabs-list">
+						  	  <li class="resp-tab-item " aria-controls="tab_item-0" role="tab"><span>All Homes</span></li>
+							  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>For Sale</span></li>
+							  <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>For Rent</span></li>
+							  <div class="clearfix"></div>
+						  </ul>				  	 
+						  <div class="resp-tabs-container">
+						  		<h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>All Homes</h2><div class="tab-1 resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
+								 	<div class="facts">
+									  	<div class="login">
+											<input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">		
+									 		<input type="submit" value="">
+									 	</div>        
+							        </div>
+						  		</div>
+							     <h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>For Sale</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+									<div class="facts">									
+										<div class="login">
+											<input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">		
+									 		<input type="submit" value="">
+									 	</div> 
+							        </div>	
+								 </div>									
+							      <h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>For Rent</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+									 <div class="facts">
+										<div class="login">
+											<input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">		
+									 		<input type="submit" value="">
+									 	</div> 
+							         </div>	
+							    </div>
+					      </div>
+					 </div>
+					 <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+				    	<script type="text/javascript">
+						    $(document).ready(function () {
+						        $('#horizontalTab').easyResponsiveTabs({
+						            type: 'default', //Types: default, vertical, accordion           
+						            width: 'auto', //auto or any width like 600px
+						            fit: true   // 100% fit in a container
+						        });
+						    });
+			  			 </script>	
+				</div>
+				</div>
+				 <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+				</script>
+					
+	
+		</div>
+		<div class="clearfix"> </div>
+		</div>	
+</div>
+<!--//-->	
+<div class=" banner-buying">
+	<div class=" container">
+	<h3><span>Submit Home Details</span></h3> 
+	<!---->
+	<div class="menu-right">
+		 <ul class="menu">
+			<li class="item1"><a href="#"> Menu<i class="glyphicon glyphicon-menu-down"> </i> </a>
+			<ul class="cute">
+				<li class="subitem1"><a href="buy.html">Buy </a></li>
+				<li class="subitem2"><a href="sell.html">Sell</a></li>
+				<li class="subitem2"><a href="seller_dashboard.html">Seller Dashboard</a></li>
+				<li class="subitem3"><a href="index.html">Logout</a></li>
+			</ul>
+		</li>
+		</ul>
+	</div>
+	<div class="clearfix"> </div>
+		<!--initiate accordion-->
+		<script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+			
+			});
+		</script>
+      		
+	</div>
+</div>
+<!--//header-->
+<!---->
+<div class="single">
+	<div class="container">
+	
+<div class="price">
+		<div class="price-grid">
+			<div class="col-sm-4 price-top">
+				<h4>City</h4>
+				<select name="city" class="in-drop">
+					<option>Select City</option>
+					<option value="bangalore">Bangalore</option>					
+				</select>
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Property type</h4>
+				<select id="property_type" name="property_type" onchange="propertyTypeChange();"class="in-drop">
+					<option>Select Property Type</option>
+					<option value="apartment">Apartment</option>
+					<option value="independent_house">Independent House</option>
+				</select>
+			</div>
+			<div class="col-sm-4 price-top">
+				<h4>Zone</h4>
+				<select class="in-drop" name="zone" >
+					<option>Select Zone</option>
+					<option value="east">East</option>
+					<option value="west">West</option>
+					<option value="north">North</option>
+					<option value="south">South</option>					
+				</select>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-4 price-top1">
+				<h4>Area</h4>
+				<select class="in-drop" name="area">
+					<option>Select Area</option>
+					<option value="whitefield">Whitefield</option>
+					<option value="marathalli">Marathalli</option>
+					<option value="brookefield">Brookefield</option>
+					<option value="kr_puram">Kr Puram</option>
+					<option value="mahadevapura">Mahadevapura</option>
+					<option value="bellandur">Bellandur</option>
+					<option value="sarjapur_road">Sarjapur Road</option>
+					<option value="hebbal">Hebbal</option>
+					<option value="ramamurthy_nagar">ramamurthy Nagar</option>
+					<option value="horamavu">Horamavu</option>
+					<option value="jayanagar">Jayanagar</option>
+					<option value="indiranagar">Indiranagar</option>
+					<option value="kormangala">Kormangala</option>
+					<option value="btmlayout">BTM Layout</option>
+					<option value="jpnagar">JP Nagar</option>
+					<option value="hsrlayout">HSR Layout</option>
+					<option value="kanakapura_road">Kanakapura Road</option>
+					<option value="electronic_city">Electronic city</option>
+				</select>				
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>Latitude</h4>
+				<input type="text" name="latitude" value="" placeholder="Enter Latitude"/>
+				<h4>Longitude</h4>
+				<input type="text" name="longitude" value="" placeholder="Enter longitude"/>	
+				<p>Please use the Gmaps to get the Lat Long of your place</p>
+			</div>
+			<div class="col-sm-4 price-top1">
+				<div class="map-single">					
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8454861410864!2d77.62115781435472!3d12.917650690891323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14f14b349a21%3A0x7cbce05215cb23ff!2sSilk+Board!5e0!3m2!1sen!2sin!4v1471153591922" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+								
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div id="apartment_attr" class="col-sm-4 price-top1" style="display: none;">
+				<h4>Bedrooms</h4>
+				<select class="in-drop" name="bedroom">
+					<option>Select Bedrooms</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>					
+				</select>
+				<h4>Balconies</h4>
+				<select class="in-drop" name="balconies">
+					<option>Select Balconies</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>					
+				</select>
+				<h4>Bathrooms</h4>
+				<select class="in-drop" name="bathrooms">
+					<option>Select Bathrooms</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>					
+				</select>
+			</div>
+			<div id="independent_house_attr" class="col-sm-4 price-top1" style="display: none;">
+				<h4>Total Floors</h4>
+				<select class="in-drop" name="total_floors">
+					<option>Select Total Floors</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>					
+				</select>
+				<h4>No. of 1 BHK</h4>
+				<select class="in-drop" name="one_bhk">
+					<option value="NA">Select 1 BHK</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>					
+				</select>
+				<h4>No. of 2 BHK</h4>
+				<select class="in-drop" name="two_bhk">
+					<option value="NA">Select 2 BHK</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>					
+				</select>
+				<h4>No. of 3 BHK</h4>
+				<select class="in-drop" name="three_bhk">
+					<option value="NA">Select 3 BHK</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>					
+				</select>
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>Parking</h4>
+				<select class="in-drop" name="parking">
+					<option>Select Parking</option>
+					<option value="covered">Covered</option>
+					<option value="open">Open</option>					
+				</select>
+				<h4>Water Source</h4>
+				<select class="in-drop" name="water">
+					<option>Select Water Source</option>
+					<option value="bore_well">Bore Well</option>
+					<option value="both">Both</option>					
+				</select>
+				<h4>Price</h4>
+				<input type="text" name="price" value="" placeholder="Enter price"/>				
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>Plot Area</h4>
+				<input type="text" name="plot_area" value="" placeholder="Enter Plot Area"/>
+				<h4>Built Up Area</h4>
+				<input type="text" name="built_up_area" value="" placeholder="Enter Built Up Area"/>
+			</div>
+			
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-4 price-top1">
+				<h4>Availability</h4>
+				<select class="in-drop" name="availability">
+					<option>Select Availability</option>
+					<option value="ready_to_move">Ready to Move</option>
+					<option value="under_construction">Under Construction</option>					
+				</select>
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>Transaction Type</h4>
+				<select class="in-drop" name="transaction">
+					<option>Select Transaction Type</option>
+					<option value="resale">Re-sale</option>
+					<option value="new">New</option>					
+				</select>		
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>On Loan</h4>
+				<select class="in-drop" name="onloan">
+					<option>Select On Loan</option>
+					<option value="yes">Yes</option>
+					<option value="no">No</option>					
+				</select>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-4 price-top1">
+				<h4>Negotiable</h4>
+				<select class="in-drop" name="negotiable">
+					<option>Select Negotiability</option>
+					<option value="yes">Yes</option>
+					<option value="no">No</option>					
+				</select>
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>Site Facing</h4>
+				<select class="in-drop" name="site_facing">
+					<option>Select Site facing</option>
+					<option value="east">East</option>
+					<option value="west">West</option>
+					<option value="north">North</option>
+					<option value="south">South</option>					
+				</select>		
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>Door Facing</h4>
+				<select class="in-drop" name="door_facing">
+					<option>Select Door Facing</option>
+					<option value="east">East</option>
+					<option value="west">West</option>
+					<option value="north">North</option>
+					<option value="south">South</option>					
+				</select>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			<div class="col-sm-4 price-top1">
+				<h4>Flooring Type</h4>
+				<select class="in-drop" name="flooring_type">
+					<option>Select Flooring Type</option>
+					<option value="vitrified_tiles">Vitrified Tiles</option>
+					<option value="marble">Marble</option>					
+				</select>
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>Furnishing</h4>
+				<select class="in-drop" name="furnishing">
+					<option>Select Furnishing</option>
+					<option value="semi">Semi</option>
+					<option value="fully">Fully</option>					
+				</select>		
+			</div>
+			<div class="col-sm-4 price-top1">
+				<h4>Year of Construction</h4>
+				<input type="text" class="in-drop" name="year_of_construction" value="" placeholder="Enter Year of Construction"/>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="price-grid">
+			
+			<div class="col-sm-6 price-top1">				
+				<input type="submit" value="Submit" onclick="submitBtnClicked();">
+				<h4 class="shiny-html-output" id="homeSuccess"></h4>
+			</div>
+			<button id="submitHomeBtn" style="display: none;" type="button" class="btn btn-default action-button shiny-bound-input">abcd</button>
+			<div class="clearfix"> </div>			
+		</div>
+	</div>					
+</div>
+
+<!---->
+
+	
+</div>
+<!---->
+<!--footer-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-top-at">
+			<div class="col-md-3 amet-sed">
+				<h4>Our Company</h4>
+				<ul class="nav-bottom">
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="blog.html">For Sale By Owner Blog</a></li>
+					<li><a href="mobile_app.html">Mobile</a></li>
+					<li><a href="terms.html">Terms & Conditions</a></li>
+					<li><a href="privacy.html">Privacy Policy</a></li>	
+					<li><a href="blog.html">Blog</a></li>
+					
+				</ul>	
+			</div>
+			<div class="col-md-3 amet-sed ">
+				<h4>Work With Us</h4>
+					<ul class="nav-bottom">
+						<li><a href="single.html">Real Estate Brokers</a></li>
+						<li><a href="single.html">Business Development</a></li>
+						<li><a href="single.html">Affiliate Programs</a></li>
+						<li><a href="contact.html">Sitemap</a></li>
+						<li><a href="career.html">Careers</a></li>
+						<li><a href="feedback.html">Feedback</a></li>	
+					</ul>	
+			</div>
+			<div class="col-md-3 amet-sed">
+				<h4>Customer Support</h4>
+				<p>Mon-Fri, 7AM-7PM </p>
+				<p>Sat-Sun, 8AM-5PM </p>
+				<p>177-869-6559</p>
+					<ul class="nav-bottom">
+						<li><a href="#">Live Chat</a></li>
+						<li><a href="faqs.html">Frequently Asked Questions</a></li>
+						<li><a href="suggestion.html">Make a Suggestion</a></li>
+					</ul>	
+			</div>
+			<div class="col-md-3 amet-sed ">
+				<h4>Property Services</h4>
+				   <ul class="nav-bottom">
+						<li><a href="single.html">Residential Property</a></li>
+						<li><a href="single.html">Commercial Property</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+						<li><a href="typo.html">Short Codes</a></li>	
+					</ul>	
+					<ul class="social">
+						<li><a href="#"><i> </i></a></li>
+						<li><a href="#"><i class="gmail"> </i></a></li>
+						<li><a href="#"><i class="twitter"> </i></a></li>
+						<li><a href="#"><i class="camera"> </i></a></li>
+						<li><a href="#"><i class="dribble"> </i></a></li>
+					</ul>
+			</div>
+		<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="col-md-4 footer-logo">
+				<h2><a href="index.html">REAL HOME</a></h2>
+			</div>
+			<div class="col-md-8 footer-class">
+				<p >© 2015 Real Home. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+			</div>
+		<div class="clearfix"> </div>
+	 	</div>
+	</div>
+</div>
+<!--//footer-->
+</body>
+</html>
